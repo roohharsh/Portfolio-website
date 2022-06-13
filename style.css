@@ -326,73 +326,54 @@ section .title::after{
     content: "what i know";
 }
 .skills .skills-content .column{
-    width: calc(50% - 30px);
+    width: calc(50% - 50px);
 }
-.skills .skills-content .left .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.skills .skills-content .left p{
-    text-align: justify;
-}
-.skills .skills-content .left a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.skills .skills-content .left a:hover{
-    color: crimson;
-    background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
+.skills .skills-content .right .text{
     display: flex;
+    margin-top: 0px;
+}
+.skills .skills-content .right .second{
+    margin-top: 30px;
+    margin-left: -8px;
+}
+.skills .skills-content .right .text .time{
+    margin-right: 112px;
+    font-size: 25px;
+    font-weight: 600;
+    color: blue;
+}
+.skills .skills-content .right .text .data .intern{
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.skills .skills-content .right .text .data .place{
+    opacity: 0.8;
+}
+.skills .skills-content .left{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.skills .skills-content .left .bars{
+    margin-right: 50px;
+    margin-bottom: 35px;
+}
+.skills .skills-content .left .bars .More{
+    margin: 10px;
+}
+.skills .skills-content .left .bars .One{
+    margin-left: 15px;
+}
+.skills .skills-content .left .bars img{
+    width: 100px;
+    height: 68px;
+}
+.skills .skills-content .left .info{
+    display: flex;
+    margin-left: 33px;
     margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: crimson;
-}
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .js::before{
-    width: 80%;
-}
-.skills-content .right .php::before{
-    width: 50%;
-}
-.skills-content .right .mysql::before{
-    width: 70%;
 }
 
 /* teams section styling */
@@ -669,8 +650,12 @@ footer span a:hover{
         font-size: 27px;
     }
     .about .about-content .right .text,
-    .skills .skills-content .left .text{
-        font-size: 19px;
+    .skills .skills-content .right .text{
+        font-size: 12px;
+    }
+    .skills .skills-content .left{
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-between;
     }
     .contact .right form .fields{
         flex-direction: column;

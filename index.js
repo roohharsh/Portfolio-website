@@ -70,4 +70,25 @@ $(document).ready(function(){
             }
         }
     });
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwRJN6GWGbIbj2Soe89uP4o1fdIR-9ZJ-aKnYn82aLlB7FdxkITQv1Gdj4nsDb9UnCt-g/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Visit"))
+                .catch(error => console.error('Error!', error.message))
+            
+                document.querySelector('.btn').addEventListener("click", ()=>{
+                    var field=document.querySelectorAll('.name'+','+'.email'+','+'.msg');
+                fieldArray=Array.prototype.slice.call(field);
+                fieldArray.forEach(function(cur,index,array){
+                        cur.value= "";
+                });
+                    
+                fieldArray[0].focus();
+                })
+            
+            })
 });

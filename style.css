@@ -274,7 +274,7 @@ section .title::after{
 .services .title::after,
 .teams .title::after{
     background: #111;
-    content: "what i achieve";
+    content: "what i created";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
@@ -287,6 +287,7 @@ section .title::after{
 }
 .services .serv-content .card:hover{
     background: crimson;
+    display: active;
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -295,6 +296,9 @@ section .title::after{
     width: 100%;
     height: 200px;
     border-radius: 30px;
+}
+.services .serv-content .card .box a img:hover{
+    display: show;
 }
 .services .serv-content .card:hover .box{
     transform: scale(1.05);
@@ -393,7 +397,7 @@ section .title::after{
 
 /* teams section styling */
 .teams .title::after{
-    content: "who with me";
+    content: "what i achieve";
 }
 .teams .carousel .card{
     background: #222;
@@ -422,10 +426,10 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 .teams .carousel .card img{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 250px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 10%;
     border: 5px solid crimson;
     transition: all 0.3s ease;
 }
@@ -502,9 +506,6 @@ section .title::after{
 .contact .right form .textarea{
     height: 80px;
     width: 100%;
-}
-.contact .right form .name{
-    margin-right: 10px;
 }
 .contact .right form .field input,
 .contact .right form .textarea textarea{

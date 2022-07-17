@@ -26,6 +26,21 @@ html{
     background: #555;
 }
 
+/* loading animation */
+#preloader{
+    background: url("./images/Preloader.gif") no-repeat center center;
+    background-color: black;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+body iframe{
+    display: none;
+}
+
 /* all similar content styling codes */
 section{
     padding: 100px 0;
@@ -287,6 +302,7 @@ section .title::after{
 }
 .services .serv-content .extra{
     margin-top: 20px;
+    width: calc(50% - 20px);
 }
 .services .serv-content .card:hover{
     background: crimson;
@@ -298,21 +314,13 @@ section .title::after{
 .services .serv-content .card .box img{
     width: 100%;
     height: 200px;
-    border-radius: 30px;
+    border-radius: 1rem;
 }
 .services .serv-content .card .box a img:hover{
     display: show;
 }
 .services .serv-content .card:hover .box{
     transform: scale(1.05);
-}
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
 }
 .services .serv-content .card .text{
     font-size: 25px;
@@ -470,6 +478,16 @@ section .title::after{
 }
 .contact .contact-content .row i{
     font-size: 25px;
+    color: blue;
+}
+.contact .contact-content .row i:hover{
+    animation: shake 1s;
+} 
+@keyframes shake{
+    10%{transform:rotate(20deg);}
+    20%{transform:rotate(-20deg);}
+    30%{transform:rotate(20deg);}
+    40%{transform:rotate(-20deg);}
 }
 .contact .contact-content .info .head{
     font-weight: 500;
